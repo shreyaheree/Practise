@@ -1,0 +1,21 @@
+name: Trigger Jenkins Job
+
+on:
+  push:
+    branches:
+      - EPSNew
+
+jobs:
+  trigger-jenkins-job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Trigger Jenkins Job
+      run: |
+        curl -X POST -v "http://144.54.82.46:8080" \
+        --user "Shreya Bansal:114a8cec19913b65c5d37676e49042ee70"
+        env: 
+            NO_PROXY=YY304158/144.54.82.46
