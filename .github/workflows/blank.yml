@@ -3,7 +3,7 @@ name: Trigger Jenkins Job
 on:
   push:
     branches:
-      - EPSNew
+      - master
 
 jobs:
   trigger-jenkins-job:
